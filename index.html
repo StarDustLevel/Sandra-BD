@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday, Sandra!</title>
+<style>
+:root{--bg1:#ffe3ef;--bg2:#fff1c9;--ink:#4a1f3a;--card:#ffffffd9;--accent:#e8478b;--cake:#f7a8c8;--cake2:#ffd7e8;--plate:#e9dfe6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#2a1030;--bg2:#10203f;--ink:#ffeaf4;--card:#ffffff1a;--accent:#ff7ab3;--cake:#e87fae;--cake2:#ffc2dc;--plate:#5a4a66;color-scheme:dark}}
+:root[data-theme="dark"]{--bg1:#2a1030;--bg2:#10203f;--ink:#ffeaf4;--card:#ffffff1a;--accent:#ff7ab3;--cake:#e87fae;--cake2:#ffc2dc;--plate:#5a4a66;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{min-height:100vh;background:linear-gradient(160deg,var(--bg1),var(--bg2));color:var(--ink);font-family:Georgia,"Times New Roman",serif;text-align:center;overflow-x:hidden}
+main{position:relative;z-index:2;max-width:560px;margin:0 auto;padding:28px 18px 60px}
+h1{font-size:clamp(2rem,9vw,3.2rem);margin:.2em 0 .1em;color:var(--accent);line-height:1.1}
+.sub{margin:0 0 18px;font-size:1.05rem;opacity:.85}
+.hint{font-family:system-ui,sans-serif;font-size:.85rem;opacity:.7;margin:6px 0 0}
+.card{background:var(--card);backdrop-filter:blur(6px);border-radius:20px;padding:22px 20px;margin:22px 0;box-shadow:0 8px 30px #0002;text-align:left;line-height:1.6;font-size:1.05rem}
+.card p{margin:.7em 0}
+.sig{text-align:right;font-style:italic;color:var(--accent)}
+button{font-family:system-ui,sans-serif;font-size:1rem;font-weight:600;border:0;border-radius:999px;padding:12px 22px;background:var(--accent);color:#fff;cursor:pointer;margin:6px}
+button:active{transform:scale(.96)}
+.balloon{position:fixed;bottom:-140px;width:60px;height:76px;border-radius:50% 50% 48% 48%;z-index:1;cursor:pointer;animation:rise linear forwards;box-shadow:inset -8px -8px 14px #0002,inset 6px 6px 10px #fff5}
+.balloon::after{content:"";position:absolute;left:50%;top:100%;width:2px;height:60px;background:#8886;transform:translateX(-50%)}
+.balloon::before{content:"";position:absolute;left:50%;top:97%;width:10px;height:9px;background:inherit;transform:translateX(-50%);clip-path:polygon(50% 0,0 100%,100% 100%)}
+@keyframes rise{to{transform:translateY(-130vh) translateX(var(--dx))}}
+.bit{position:fixed;width:9px;height:14px;z-index:5;pointer-events:none;animation:fall 1.4s ease-out forwards}
+@keyframes fall{to{transform:translate(var(--x),var(--y)) rotate(540deg);opacity:0}}
+svg{width:min(300px,80vw);height:auto;overflow:visible}
+.flame{transform-origin:center bottom;animation:flick .5s ease-in-out infinite alternate;transition:opacity .3s}
+.out .flame{opacity:0;animation:none}
+@keyframes flick{from{transform:scale(1,1) rotate(-3deg)}to{transform:scale(.9,1.15) rotate(3deg)}}
+.smoke{opacity:0;transition:opacity .4s}
+.out .smoke{opacity:.5}
+</style>
+</head>
+<body>
+<main>
+  <h1>Happy Birthday, Sandra!</h1>
+  <p class="sub">Today is all about you.</p>
+
+  <div id="cakeWrap">
+    <svg viewBox="0 0 300 250" role="img" aria-label="Birthday cake with three candles">
+      <ellipse cx="150" cy="225" rx="135" ry="16" fill="var(--plate)"/>
+      <rect x="50" y="150" width="200" height="72" rx="10" fill="var(--cake)"/>
+      <rect x="75" y="95" width="150" height="58" rx="10" fill="var(--cake2)"/>
+      <path d="M50 160q16 20 33 0t33 0 34 0 33 0 34 0 33 0v-12H50z" fill="#fff"/>
+      <path d="M75 104q12 16 25 0t25 0 25 0 25 0 25 0v-10H75z" fill="#fff"/>
+      <circle cx="90" cy="190" r="5" fill="#fff"/><circle cx="150" cy="198" r="5" fill="#fff"/><circle cx="210" cy="190" r="5" fill="#fff"/>
+      <g>
+        <rect x="108" y="62" width="10" height="34" rx="3" fill="#6ec6ff"/>
+        <rect x="145" y="62" width="10" height="34" rx="3" fill="#ffd54f"/>
+        <rect x="182" y="62" width="10" height="34" rx="3" fill="#8be28b"/>
+        <g class="flame"><path d="M113 58c-8-10-3-18 0-24 3 6 8 14 0 24z" fill="#ffb300"/><path d="M113 56c-4-5-2-9 0-12 2 3 4 7 0 12z" fill="#fff59d"/></g>
+        <g class="flame" style="animation-delay:.15s"><path d="M150 58c-8-10-3-18 0-24 3 6 8 14 0 24z" fill="#ffb300"/><path d="M150 56c-4-5-2-9 0-12 2 3 4 7 0 12z" fill="#fff59d"/></g>
+        <g class="flame" style="animation-delay:.3s"><path d="M187 58c-8-10-3-18 0-24 3 6 8 14 0 24z" fill="#ffb300"/><path d="M187 56c-4-5-2-9 0-12 2 3 4 7 0 12z" fill="#fff59d"/></g>
+        <g class="smoke" stroke="#999" fill="none" stroke-width="2" stroke-linecap="round"><path d="M113 56q-6-10 2-18"/><path d="M150 56q-6-10 2-18"/><path d="M187 56q-6-10 2-18"/></g>
+      </g>
+    </svg>
+    <div><button id="blow">Blow out the candles</button></div>
+    <p class="hint">Tap the balloons to pop them!</p>
+  </div>
+
+  <div class="card">
+    <p>Hey Sandra!</p>
+    <p>Happy birthday! I just wanted to take a second to say how much I appreciate you. Seriously, you make work a lot better. You’re the kind of person who actually helps, keeps things fun, and somehow stays cool when everything is on fire.</p>
+    <p>It’s honestly been a pleasure working with you, and I’m lucky to have you around. I hope today is full of cake, good people, and zero emails.</p>
+    <p>“Facts or no facts” 😄</p>
+    <p>Okay, go eat something delicious. You earned it!</p>
+    <p class="sig">With love and way too much cake, Martin</p>
+    <p class="sig">“siiii oooo noooo”</p>
+  </div>
+
+  <button id="more">More balloons!</button>
+  <button id="party">Confetti time</button>
+</main>
+
+<script>
+(function(){
+  var colors=["#ff5c8a","#ffb703","#4cc9f0","#7ae582","#b388ff","#ff8c42"];
+  function rnd(a,b){return a+Math.random()*(b-a)}
+  function confetti(x,y,n){
+    for(var i=0;i<n;i++){
+      var d=document.createElement("div");
+      d.className="bit";
+      d.style.left=x+"px";d.style.top=y+"px";
+      d.style.background=colors[Math.floor(rnd(0,colors.length))];
+      d.style.setProperty("--x",rnd(-160,160)+"px");
+      d.style.setProperty("--y",rnd(-140,200)+"px");
+      document.body.appendChild(d);
+      setTimeout(function(el){return function(){el.remove()}}(d),1500);
+    }
+  }
+  function balloon(){
+    var b=document.createElement("div");
+    b.className="balloon";
+    b.style.left=rnd(2,90)+"vw";
+    b.style.background=colors[Math.floor(rnd(0,colors.length))];
+    b.style.setProperty("--dx",rnd(-60,60)+"px");
+    b.style.animationDuration=rnd(8,14)+"s";
+    b.addEventListener("click",function(e){
+      var r=b.getBoundingClientRect();
+      confetti(r.left+30,r.top+38,14);
+      b.remove();
+    });
+    b.addEventListener("animationend",function(){b.remove()});
+    document.body.appendChild(b);
+  }
+  function burst(n){for(var i=0;i<n;i++)setTimeout(balloon,i*220)}
+  burst(10);
+  setInterval(function(){if(document.querySelectorAll(".balloon").length<14)balloon()},1600);
+
+  var wrap=document.getElementById("cakeWrap"),blow=document.getElementById("blow"),out=false;
+  blow.addEventListener("click",function(){
+    out=!out;
+    wrap.classList.toggle("out",out);
+    blow.textContent=out?"Light them again":"Blow out the candles";
+    if(out){
+      var r=wrap.getBoundingClientRect();
+      confetti(innerWidth/2,r.top+60,40);burst(8);
+    }
+  });
+  document.getElementById("more").addEventListener("click",function(){burst(10)});
+  document.getElementById("party").addEventListener("click",function(){
+    for(var i=0;i<5;i++)setTimeout(function(){confetti(rnd(40,innerWidth-40),rnd(80,innerHeight/2),30)},i*200);
+  });
+})();
+</script>
+</body>
+</html>
